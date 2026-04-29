@@ -1,0 +1,81 @@
+.product-card {
+  position: relative;
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+  color: #96305a;
+}
+
+.product-image {
+  width: 140px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.brand {
+  color: #96305a;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  color: #333;
+}
+
+.price {
+  font-weight: bold;
+  color: #222;
+}
+
+.bag-button {
+  margin-top: 10px;
+  background-color: #96305a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bag-button:hover {
+  background-color: #7d274a;
+}
+
+.card-message {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 45px;
+  background-color: #96305a;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+  z-index: 2;
+}
+
+.icon-favorite {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
