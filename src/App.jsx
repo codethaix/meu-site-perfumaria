@@ -12,6 +12,7 @@ import Register from "./pages/Register"
 import Category from "./pages/Category"
 import Search from "./pages/Search"
 import Quiz from "./pages/Quiz"
+import Admin from "./pages/Admin"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/categoria/:categoria" element={<Category />} />
         <Route path="/busca" element={<Search />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   )
