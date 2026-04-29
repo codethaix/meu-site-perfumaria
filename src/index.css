@@ -733,3 +733,96 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+/* QUIZ PERFUME IDEAL */
+.quiz-page {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f8f8f8, #f7edf1);
+  min-height: 70vh;
+}
+
+.quiz-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quiz-card,
+.quiz-result {
+  background-color: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.quiz-step {
+  color: #96305a;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quiz-card h1,
+.quiz-result h1 {
+  color: #96305a;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.quiz-card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.quiz-options button {
+  padding: 18px;
+  border: 1px solid #e6ccd6;
+  background-color: #fff;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.quiz-options button:hover {
+  background-color: #96305a;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.quiz-result p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.quiz-restart {
+  margin-top: 30px;
+  padding: 13px 28px;
+  background-color: #96305a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.quiz-restart:hover {
+  background-color: #7d274a;
+}
+
+@media (max-width: 700px) {
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-card,
+  .quiz-result {
+    padding: 25px;
+  }
+}

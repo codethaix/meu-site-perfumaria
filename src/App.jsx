@@ -9,6 +9,9 @@ import Payment from "./pages/Payment"
 import OrderSuccess from "./pages/OrderSuccess"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Category from "./pages/Category"
+import Search from "./pages/Search"
+import Quiz from "./pages/Quiz"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -28,6 +31,9 @@ function App() {
         <Route path="/pedido-concluido" element={<OrderSuccess />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
+        <Route path="/categoria/:categoria" element={<Category />} />
+        <Route path="/busca" element={<Search />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </BrowserRouter>
   )
