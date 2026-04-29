@@ -64,9 +64,12 @@ function Header() {
     {
       titulo: "Marcas",
       opcoes: [
-        { nome: "Nativa SPA", slug: "nativa-spa" },
-        { nome: "Eudora", slug: "eudora" },
-        { nome: "O Boticário", slug: "o-boticario" },
+        
+        { nome: "DIOR", slug: "dior" },
+        { nome: "EUDORA", slug: "eudora" },
+        { nome: "O BOTICÁRIO", slug: "o-boticario" },
+        { nome: "GUCCI", slug: "gucci" },
+        { nome: "LANCÔME", slug: "lancome" },
       ],
     },
     {
@@ -81,8 +84,7 @@ function Header() {
     {
       titulo: "Presentes",
       opcoes: [
-        { nome: "Kits Femininos", slug: "kits-femininos" },
-        { nome: "Kits Masculinos", slug: "kits-masculinos" },
+        { nome: "Kits ", slug: "kits" },
         { nome: "Até R$100", slug: "ate-100" },
         { nome: "Luxo", slug: "luxo" },
       ],
