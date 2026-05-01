@@ -1,37 +1,66 @@
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 
 function Login() {
+  const navigate = useNavigate()
+
+  const [email, setEmail] = useState("")
+  const [senha, setSenha] = useState("")
+  const [mensagem, setMensagem] = useState("")
+
+  function fazerLogin(event) {
+    event.preventDefault()
+
+    const usuario = JSON.parse(localStorage.getItem("usuarioCadastrado"))
+
+    if (!usuario) {
+      setMensagem("Nenhuma conta cadastrada.")
+      return
+    }
+
+    if (usuario.email === email && usuario.senha === senha) {
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuario))
+      navigate("/cadastro")
+    } else {
+      setMensagem("E-mail ou senha inválidos.")
+    }
+  }
+
   return (
     <section className="auth-page">
       <div className="auth-card">
         <h1>Bem Vindo!</h1>
         <p>Para continuar, digite seu e-mail e senha</p>
 
-        <button className="google-button">
-          Fazer Login com o Google
-        </button>
-
-        <span className="auth-divider">ou utilize sua conta</span>
-
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={fazerLogin}>
           <label>
             e-mail:
-            <input type="email" placeholder="Digite seu e-mail" />
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              required
+            />
           </label>
 
           <label>
             Senha:
-            <input type="password" placeholder="Digite sua senha" />
+            <input
+              type="password"
+              placeholder="Digite sua senha"
+              value={senha}
+              onChange={(event) => setSenha(event.target.value)}
+              required
+            />
           </label>
 
-          <button type="button" className="auth-button">
+          <button type="submit" className="auth-button">
             Entrar
           </button>
         </form>
 
-        <a className="forgot-password" href="#">
-          Esqueci minha senha
-        </a>
+        {mensagem && <p className="auth-message">{mensagem}</p>}
 
         <p className="auth-link">
           Não tem uma conta? <Link to="/cadastro">Cadastre-se</Link>

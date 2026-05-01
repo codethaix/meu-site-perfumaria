@@ -64,7 +64,6 @@ function Header() {
     {
       titulo: "Marcas",
       opcoes: [
-        
         { nome: "DIOR", slug: "dior" },
         { nome: "EUDORA", slug: "eudora" },
         { nome: "O BOTICÁRIO", slug: "o-boticario" },
@@ -84,7 +83,7 @@ function Header() {
     {
       titulo: "Presentes",
       opcoes: [
-        { nome: "Kits ", slug: "kits" },
+        { nome: "Kits", slug: "kits" },
         { nome: "Até R$100", slug: "ate-100" },
         { nome: "Luxo", slug: "luxo" },
       ],
@@ -98,14 +97,12 @@ function Header() {
         { nome: "Últimas Unidades", slug: "ultimas-unidades" },
       ],
     },
-
     {
-  titulo: "Perfume Ideal",
-  opcoes: [
-    { nome: "Fazer Quiz", slug: "quiz", rota: "/quiz" },
-  ],
-},
-
+      titulo: "Perfume Ideal",
+      opcoes: [
+        { nome: "Fazer Quiz", slug: "quiz", rota: "/quiz" },
+      ],
+    },
   ]
 
   return (
@@ -156,8 +153,9 @@ function Header() {
             <img src={iconFavorite} alt="Favoritos" className="icon-img" />
           </Link>
 
-          <Link to="/login">
-            <img src={iconUser} alt="Perfil" className="icon-img" />
+          {/* 🔥 ALTERAÇÃO AQUI */}
+          <Link to="/cadastro">
+            <img src={iconUser} alt="Cadastro" className="icon-img" />
           </Link>
 
           <Link to="/sacola">
